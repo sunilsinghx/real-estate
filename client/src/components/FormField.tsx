@@ -45,7 +45,8 @@ interface FormFieldProps {
     | "switch"
     | "password"
     | "file"
-    | "multi-input";
+    | "multi-input"
+    | "multi-select";
   placeholder?: string;
   options?: { value: string; label: string }[];
   accept?: string;
@@ -160,6 +161,29 @@ export const CustomFormField: React.FC<FormFieldProps> = ({
             inputClassName={inputClassName}
           />
         );
+      case "multi-select":
+        return (
+          <div className="border border-gray-200 rounded p-2">
+            {options?.map((option) => (
+              <label key={option.value} className="flex items-center space-x-2">
+                <input
+                  type="checkbox"
+                  value={option.value}
+                  checked={field.value?.includes(option.value)}
+                  onChange={(e) => {
+                    const checked = e.target.checked;
+                    const newValue = checked
+                      ? [...(field.value || []), option.value]
+                      : field.value.filter((v: string) => v !== option.value);
+                    field.onChange(newValue);
+                  }}
+                />
+                <span>{option.label}</span>
+              </label>
+            ))}
+          </div>
+        );
+      
       default:
         return (
           <Input

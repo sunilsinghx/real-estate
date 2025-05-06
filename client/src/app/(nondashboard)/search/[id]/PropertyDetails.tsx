@@ -12,6 +12,8 @@ const PropertyDetails = ({ propertyId }: PropertyDetailsProps) => {
     isLoading,
   } = useGetPropertyQuery(propertyId);
 
+  console.log("PD: ",isLoading);
+  
   if (isLoading) return <>Loading...</>;
   if (isError || !property) {
     return <>Property not Found</>;

@@ -43,6 +43,10 @@ const Map = () => {
     return () => map.remove();
   }, [isLoading, isError, properties, filters.coordinates]);
 
+  console.log("MAP: ",isLoading);
+  
+
+
   if (isLoading) return <>Loading...</>;
   if (isError || !properties) return <div>Failed to fetch properties</div>;
 

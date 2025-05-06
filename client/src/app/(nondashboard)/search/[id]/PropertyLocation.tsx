@@ -41,6 +41,9 @@ const PropertyLocation = ({ propertyId }: PropertyDetailsProps) => {
     return () => map.remove();
   }, [property, isError, isLoading]);
 
+  console.log("PL: ",isLoading);
+  
+
   if (isLoading) return <>Loading...</>;
   if (isError || !property) {
     return <>Property not Found</>;
