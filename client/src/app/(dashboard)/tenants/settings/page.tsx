@@ -19,7 +19,6 @@ const TenantSettings = () => {
     phoneNumber: authUser?.userInfo.phoneNumber,
   };
 
-  console.log(initialData)
 
   const handleSubmit = async (data: typeof initialData) => {
     await updateTenant({

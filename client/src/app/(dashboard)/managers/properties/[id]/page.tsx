@@ -45,6 +45,8 @@ const PropertyTenants = () => {
     return currentMonthPayment?.paymentStatus || "Not Paid";
   };
 
+
+
   return (
     <div className="dashboard-container">
       {/* Back to properties page */}
