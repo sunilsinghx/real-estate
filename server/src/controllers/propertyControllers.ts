@@ -236,7 +236,6 @@ export const createProperty = async (
 
 
 
-    console.log("Photo Urls: ", photoUrls);
     
 
     const geocodingUrl = `https://nominatim.openstreetmap.org/search?${new URLSearchParams(

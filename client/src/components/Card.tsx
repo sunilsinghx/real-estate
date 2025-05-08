@@ -14,7 +14,6 @@ const Card = ({
     property.photoUrls?.[0] || "/placeholder.jpg"
   );
 
-  console.log(imgSrc);
   
 
   return (
