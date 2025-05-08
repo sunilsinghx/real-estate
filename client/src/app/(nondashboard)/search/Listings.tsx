@@ -49,7 +49,6 @@ const Listings = () => {
       });
     }
   };
-  console.log("LISTING:: ",properties);
 
   if (isLoading) return <>Loading...</>;
   if (isError || !properties) return <div>Failed to fetch properties</div>;

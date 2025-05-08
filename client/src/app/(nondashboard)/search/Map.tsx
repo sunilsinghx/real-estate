@@ -43,7 +43,6 @@ const Map = () => {
     return () => map.remove();
   }, [isLoading, isError, properties, filters.coordinates]);
 
-  console.log("MAP: ",isLoading);
   
 
 

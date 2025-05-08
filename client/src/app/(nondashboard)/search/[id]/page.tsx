@@ -20,10 +20,6 @@ const SingleListing = () => {
 
 
 
-      console.log("property urls: ",property?.photoUrls);
-      
-
-
   return (
     <div>
        {!propertyLoading && (
