@@ -5,17 +5,17 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "example.com",
-        port: "",
+        hostname: process.env.NEXT_PUBLIC_S3_BUCKET_HOSTNAME!,
         pathname: "/**",
       },
       {
         protocol: "https",
-        hostname: "*.amazonaws.com",
+        hostname: "example.com",
         port: "",
         pathname: "/**",
       },
     ],
+    unoptimized: true, // Disable image optimization
   },
 };
 

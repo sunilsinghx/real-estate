@@ -14,6 +14,9 @@ const Card = ({
     property.photoUrls?.[0] || "/placeholder.jpg"
   );
 
+  console.log(imgSrc);
+  
+
   return (
     <div className="bg-white rounded-xl overflow-hidden shadow-lg w-full mb-5">
       <div className="relative">
